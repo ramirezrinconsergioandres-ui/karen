@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Karen ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(#ff758c,#ff7eb3);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.contenedor{
+padding:30px;
+}
+
+h1{
+font-size:40px;
+}
+
+p{
+font-size:20px;
+line-height:1.7;
+}
+
+.galeria{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+}
+
+.galeria img{
+width:250px;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 0 15px white;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff4f81;
+cursor:pointer;
+margin-top:30px;
+}
+
+.corazon{
+position:fixed;
+top:-20px;
+color:red;
+animation:caer 5s linear infinite;
+}
+
+@keyframes caer{
+0%{
+transform:translateY(-50px);
+}
+100%{
+transform:translateY(110vh);
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>❤️ Para Karen Muñoz ❤️</h1>
+
+<h2>Mi amor...</h2>
+
+<p>
+Quería sorprenderte de una forma diferente.
+</p>
+
+<p>
+Gracias por cada abrazo, cada sonrisa y cada momento que hemos pasado juntos. Aunque no han sido muchos, cada uno de ellos ha sido muy lindo.
+</p>
+
+<p>
+Quiero que sepas que la quiero mucho, mujer.
+</p>
+
+
+<h2>Nuestros recuerdos 📸</h2>
+
+<div class="galeria">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+</div>
+
+<button onclick="mensaje()">
+❤️ Presiona aquí ❤️
+</button>
+
+</div>
+
+<script>
+
+function mensaje(){
+alert("Karen ❤️\n\nGracias por todo.\nTe quiero mucho.\n\nCon amor,\nSergio ❤️");
+}
+
+setInterval(function(){
+
+let c=document.createElement("div");
+c.className="corazon";
+c.innerHTML="❤️";
+c.style.left=Math.random()*100+"%";
+c.style.fontSize=(20+Math.random()*30)+"px";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+c.remove();
+},5000);
+
+},300);
+
+</script>
+
+</body>
+</html>
